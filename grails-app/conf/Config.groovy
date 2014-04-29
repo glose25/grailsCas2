@@ -96,7 +96,6 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'edu.rpi.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'edu.rpi.UserRole'
 grails.plugin.springsecurity.authority.className = 'edu.rpi.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-    '/secure/**':                     ['permitAll'],
     '/testcas/**':                    ['permitAll'],
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
@@ -112,7 +111,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.cas.serverUrlPrefix = 'https://cas-auth.rpi.edu/cas'
 grails.plugin.springsecurity.cas.loginUri = '/login'
 grails.plugin.springsecurity.cas.proxyReceptorUrl = '/secure/receptor'
-    // FOR LOCAL DEPLOYMENT
+
+// FOR LOCAL DEPLOYMENT
 grails.plugin.springsecurity.cas.serviceUrl = "http://localhost:8080/${appName}/j_spring_cas_security_check"
 grails.plugin.springsecurity.cas.proxyCallbackUrl = "http://localhost:8080/${appName}/secure/receptor"
 grails.plugin.springsecurity.logout.afterLogoutUrl = "https://cas-auth.rpi.edu/cas/logout?url=http://localhost:8080/${appName}/"

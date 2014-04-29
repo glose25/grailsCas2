@@ -19,6 +19,19 @@
 	</head>
 	<body>
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+
+             <div id="securityLine">
+                <div class="securityText">
+                    <sec:ifLoggedIn>
+                        You are logged in as<strong> <sec:username/></strong><br/>
+                        <strong><g:logoutUrl/></strong>                                               
+                    </sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn>
+                        <br/><strong>You are not logged in.</strong><br/><br/>
+                    </sec:ifNotLoggedIn>                    
+                </div>
+            </div>
+		
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
